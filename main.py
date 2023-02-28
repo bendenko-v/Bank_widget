@@ -1,5 +1,5 @@
-import json
-from datetime import datetime
+from utils import load_json
 
-with open('operations.json', 'r', encoding='utf-8') as file:
-    data = json.load(file)
+PATH = 'operations.json'
+
+data = load_json(PATH)
