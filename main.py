@@ -12,17 +12,17 @@ def app():
     index = 0
 
     while printed < 5:
-        operation = data[index]
+        operation: dict = data[index]
 
         if operation['state'] == 'EXECUTED':
-            date = datetime.strptime(operation["date"].split("T")[0], '%Y-%m-%d')
-            date = date.strftime('%d.%m.%Y')
+            date: datetime = datetime.strptime(operation["date"].split("T")[0], '%Y-%m-%d')
+            date: str = date.strftime('%d.%m.%Y')
 
             from_, acc1 = get_data_from_operation(operation, "from")
             to_, acc2 = get_data_from_operation(operation, "to")
 
-            amount = operation['operationAmount']['amount']
-            currency = operation['operationAmount']['currency']['name']
+            amount: str = operation['operationAmount']['amount']
+            currency: str = operation['operationAmount']['currency']['name']
 
             print(f'{date} {operation["description"]}\n'
                   f'{from_} {acc1} -> {to_} {acc2}\n'
@@ -36,6 +36,6 @@ if __name__ == '__main__':
     data = load_json(PATH)
 
     if type(data) == str:
-        print(f'Ошибка: {data}')
+        print(f'Error: {data}')
     else:
         app()

@@ -1,7 +1,7 @@
 import os.path
 import pytest
 
-from main import app, PATH
+from main import PATH
 from utils import *
 
 

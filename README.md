@@ -1,6 +1,6 @@
-# SkyPro / Coursework 3 / v.2
+# Bank Widget
 
-New feature for bank widget.
+Bank data processing widget.
 
 ## Usage
 

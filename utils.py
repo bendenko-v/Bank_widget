@@ -16,7 +16,7 @@ def load_json(path: str) -> list[dict] | str:
         return data
 
 
-def key_date(operation: dict) -> datetime.date:
+def key_date(operation: dict) -> datetime:
     """
     Gets a date in string format from an operation and return a datetime object
 
